@@ -1,0 +1,11 @@
+menuconfig IQS5XX
+	bool "IQS5XX Trackpad IC"
+	default y
+	depends on GPIO
+	depends on I2C
+	help
+	  Enable driver for IQS5XX based-trackpads
+
+if IQS5XX
+
+endif # IQS5XX
