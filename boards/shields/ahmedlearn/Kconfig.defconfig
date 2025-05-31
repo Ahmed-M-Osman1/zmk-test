@@ -4,4 +4,10 @@ if SHIELD_AHMEDLEARN
 config ZMK_KEYBOARD_NAME
     default "ahmedlearn"
 
+config IQS5XX
+    default y
+
+config I2C
+    default y
+
 endif
