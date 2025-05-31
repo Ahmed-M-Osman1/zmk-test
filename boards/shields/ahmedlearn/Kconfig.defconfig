@@ -5,9 +5,11 @@ config ZMK_KEYBOARD_NAME
     default "ahmedlearn"
 
 config IQS5XX
+    bool
     default y
 
 config I2C
+    bool
     default y
 
 endif
