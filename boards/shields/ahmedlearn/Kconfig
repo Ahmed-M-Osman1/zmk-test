@@ -1,0 +1,8 @@
+menu "Ahmedlearn Shield Options"
+
+config IQS5XX
+    bool "Enable IQS5XX sensor"
+    help
+      Enables support for the IQS5XX trackpad sensor.
+
+endmenu
