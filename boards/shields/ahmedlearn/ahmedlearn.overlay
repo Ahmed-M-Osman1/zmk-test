@@ -32,23 +32,20 @@
             ;
     };
 
-    trackpad {
-        compatible = "azoteq,iqs5xx";
-        status = "okay";
-        
-        dr-gpios = <&pro_micro_d 8 GPIO_ACTIVE_LOW>;  // Change pin number as needed
-        
-        i2c = <&i2c0>;
-        reg = <0x74>;  // I2C address of IQS5XX
-    };
 };
 
-&i2c0 {
+&pro_micro_i2c {
     status = "okay";
-    
-    clock-frequency = <400000>;
-    
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
+
+    trackpad: trackpad@74 {
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
+        dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+    };
+
+    trackpad_input_listener: trackpad_input_listener {
+        compatible = "zmk,input-listener";
+        device = < &trackpad >;
+    };
 };
