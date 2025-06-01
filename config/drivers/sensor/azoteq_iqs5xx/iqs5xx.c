@@ -18,7 +18,7 @@
 
 
 // DT_DRV_INST(0);
-LOG_MODULE_REGISTER(azoteq_iqs5xx, CONFIG_ZMK_LOG_LEVEL);
+LOG_MODULE_REGISTER(azoteq_iqs5xx, LOG_LEVEL_DBG);
 
 static int iqs_regdump_err = 0;
 
