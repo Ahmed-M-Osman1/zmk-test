@@ -12,4 +12,12 @@ config I2C
     bool
     default y
 
+config IQS5XX_THREAD_PRIORITY
+    int "IQS5XX thread priority"
+    default 100
+
+config IQS5XX_INTERRUPT
+    bool "Enable IQS5XX interrupt mode"
+    default y
+
 endif
